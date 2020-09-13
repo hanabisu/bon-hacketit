@@ -33,6 +33,10 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {},
   title: {
     flexGrow: 1,
+    color: "black",
+  },
+  bgcolor: {
+    background: "#E0EEE0",
   },
   list: {
     width: 250,
@@ -109,10 +113,10 @@ function ButtonAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.bgcolor}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            My Plants
+            Garden Gnome
           </Typography>
           <IconButton
             edge="start"

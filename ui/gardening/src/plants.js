@@ -51,14 +51,14 @@ const waterButton = (nextWatering) => {
   }
 }
 
-export default function Plant({ plantName, plantDate, shortDescription, nextHarvest, nextWatering }) {
+export default function Plant({ plantName, plantDate, shortDescription, nextHarvest, nextWatering, imageURL }) {
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
       <CardMedia
         className={classes.media}
-        image="/plant.jpg"
+        image={imageURL}
         title={plantName}
       />
       <CardContent>

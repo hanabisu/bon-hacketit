@@ -9,12 +9,12 @@ import React, {useState} from 'react';
 import Plant from './plants';
 
 export function Dashboard() {
-    const [plants, setPlants] = useState([{"name":"plant1", "desc":"plant1222222"}, {"name":"plant2", "desc":"plan2"},
-    {"name":"plant1", "desc":"plant1222222"},{"name":"plant1", "desc":"plant1222222"},
-    {"name":"plant1", "desc":"plant1222222"},{"name":"plant1", "desc":"plant1222222"},
-    {"name":"plant1", "desc":"plant1222222"},{"name":"plant1", "desc":"plant1222222"},
-    {"name":"plant1", "desc":"plant1222222"},{"name":"plant1", "desc":"plant1222222"},
-    {"name":"plant1", "desc":"plant1222222"},{"name":"plant1", "desc":"plant1222222"},
+    const [plants, setPlants] = useState([{"name":"plant1", "desc":"plant1222222", "nextHarvest": 0}, {"name":"plant2", "desc":"plan2", "nextHarvest": 1},
+    {"name":"plant3", "desc":"plant1222222", "nextHarvest": 2},{"name":"plant4", "desc":"plant1222222", "nextHarvest": 3},
+    {"name":"plant5", "desc":"plant1222222", "nextHarvest": 4},{"name":"plant6", "desc":"plant1222222", "nextHarvest": 5},
+    {"name":"plant7", "desc":"plant1222222", "nextHarvest": -1},{"name":"plant8", "desc":"plant1222222", "nextHarvest": 0},                         
+    {"name":"plant9", "desc":"plant1222222", "nextHarvest": 0},{"name":"plant10", "desc":"plant1222222", "nextHarvest": 0},
+    {"name":"plant11", "desc":"plant1222222", "nextHarvest": 0},{"name":"plant12", "desc":"plant1222222", "nextHarvest": 0},
 ]);
 
     return (
@@ -30,12 +30,13 @@ export function Dashboard() {
                     shortDescription = {plant.desc}
                     longDescription = "longer info"
                     nextWatering = "4"
-                    nextHarvest = "3"
+                    nextHarvest = {plant.nextHarvest}
                     />
                     </Grid>
                 ))
             }
             </Grid>
+
         </div>
     );
 }

@@ -19,7 +19,17 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Plant({plantName, plantDate, shortDescription}) {
+const nextHarvestText = (nextHarvest) =>{
+  if(nextHarvest > 0){
+    return `Days until harvest: ${nextHarvest}`
+  }else if (nextHarvest == 0){
+    return "Ready to harvest!"
+  }else{
+    return "";
+  }
+};
+
+export default function Plant({plantName, plantDate, shortDescription, nextHarvest}) {
   const classes = useStyles();
 
   return (
@@ -38,6 +48,9 @@ export default function Plant({plantName, plantDate, shortDescription}) {
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             {shortDescription}
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            {nextHarvestText(nextHarvest)}
           </Typography>
         </CardContent>
       <CardActions>

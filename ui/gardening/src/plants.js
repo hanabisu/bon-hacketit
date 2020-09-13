@@ -54,8 +54,11 @@ export default function Plant({plantName, plantDate, shortDescription, nextHarve
           </Typography>
         </CardContent>
       <CardActions>
+      <Button variant="contained" size="small" color="primary">
+          Water
+        </Button>
         <Button size="small" color="primary">
-          More Information
+         Learn More
         </Button>
       </CardActions>
     </Card>

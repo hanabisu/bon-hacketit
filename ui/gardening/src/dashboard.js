@@ -7,6 +7,7 @@ import {
 import Grid from '@material-ui/core/Grid';
 import React, {useState} from 'react';
 import Plant from './plants';
+import AddIcon from '@material-ui/icons/Add';
 
 export function Dashboard() {
     const [plants, setPlants] = useState([{"name":"plant1", "desc":"plant1222222", "nextHarvest": 0}, {"name":"plant2", "desc":"plan2", "nextHarvest": 1},

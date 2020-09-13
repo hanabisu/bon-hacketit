@@ -56,12 +56,8 @@ export default function Plant({ plantName, plantDate, shortDescription, nextHarv
 
   return (
     <Card className={classes.root}>
-      <CardMedia
-        className={classes.media}
-        image={imageURL}
-        title={plantName}
-      />
       <CardContent>
+      <img src={imageURL} alt={plantName} className={classes.media} />
         <Typography gutterBottom variant="h5" component="h2">
           {plantName}
         </Typography>
